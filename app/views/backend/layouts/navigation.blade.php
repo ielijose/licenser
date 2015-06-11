@@ -12,7 +12,7 @@
             </a>
             <a class="navbar-brand" href="/dashboard"></a>
         </div>
-        <div class="navbar-center">Admin</div>
+        <div class="navbar-center">Licenser</div>
         <div class="navbar-collapse collapse">
             <!-- BEGIN TOP NAVIGATION MENU -->
             <ul class="nav navbar-nav pull-right header-menu">

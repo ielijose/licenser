@@ -72,7 +72,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 m-t-20 m-b-40 align-center">
-            <a href="/libros" class="btn btn-default m-r-10 m-t-10"><i class="fa fa-reply"></i> Volver</a>
+            <a href="/licenses" class="btn btn-default m-r-10 m-t-10"><i class="fa fa-reply"></i> Volver</a>
             <a href="/licenses/delete/{{ $license->id }}" class="btn btn-danger delete-ad m-r-10 m-t-10"><i class="fa fa-times"></i> Eliminar</a>
         </div>
     </div>

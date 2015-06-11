@@ -16,7 +16,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                            <h2>Hi {{ Auth::user()->name() }}!, Welcome to license control for wordpress plugin, enjoy.</h2>
+                            <h2>Hola {{ Auth::user()->name() }}!, Bienvenido a Licenser.</h2>
                         </div>
                     </div>
                 </div>
@@ -27,44 +27,31 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="panel no-bd bd-9 panel-stat">
                     <div class="panel-body bg-dark">
-                        <div class="icon"><i class="fa fa-book"></i>
+                        <div class="icon"><i class="fa fa-barcode"></i>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="stat-num">?</div>
-                                <a href="/libros"><h3>Libros</h3></a>
+                                <div class="stat-num">{{ count(License::all()) }}</div>
+                                <a href="/licenses"><h3>Licencias</h3></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="panel no-bd bd-9 panel-stat">
                     <div class="panel-body bg-blue">
                         <div class="icon"><i class="fa fa-user"></i>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="stat-num">?</div>
-                                <a href="/estudiantes"><h3>Estudiantes</h3></a>
+                                <div class="stat-num"> {{ count(User::all()) }} </div>
+                                <a href="/users"><h3>Usuarios</h3></a>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="panel no-bd bd-9 panel-stat">
-                    <div class="panel-body bg-green">
-                        <div class="icon"><i class="fa fa-edit"></i></div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="stat-num">?</div>
-                                <a href="/prestamos"><h3>Prestamos</h3></a>
                             </div>
                         </div>
                     </div>
