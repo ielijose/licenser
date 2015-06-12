@@ -40,26 +40,15 @@ Route::group(['before' => 'auth'], function () {
 		/* License */
 		Route::resource('licenses', 'LicenseController');
 		Route::get('/licenses/delete/{id}', 'LicenseController@destroy');
-		/*Route::get('/libros/delete/{id}', 'BookController@destroy');
-		Route::post('/libros/update/{id}', 'BookController@update');
-
-		Route::resource('estudiantes', 'StudentController');
-		Route::get('/estudiantes/delete/{id}', 'StudentController@destroy');
-		Route::post('/estudiantes/update/{id}', 'StudentController@update');
-
-
-
-		Route::get('/prestamos', 'StudentController@prestamos');
-
-		Route::post('/prestar', 'StudentController@prestar');
-
-		Route::get('/devolver/{id}', 'StudentController@devolver');*/
-
 
 		require (__DIR__ . '/routes/shared.php');
 	}
 
 });
+
+/* API */
+	Route::post('/api/activate', ['uses' => 'ApiController@activate']);
+
 
 // Error Handle
 

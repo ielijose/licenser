@@ -4,9 +4,9 @@
 <!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
 
-<head>       
+<head>
     <meta charset="utf-8">
-    <title>Acceder :: Biblioteca</title>
+    <title>Acceder :: Licenser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="" name="description" />
     <meta content="themes-lab" name="author" />
@@ -59,8 +59,8 @@
                         </div>
                         @endif
                         <!-- END ERROR BOX -->
-                        
-                                                
+
+
                         {{ Form::open(['route' => 'login', 'method' => 'POST', 'role' => 'form', 'novalidate']) }}
                             <div class="form-group">
                                 {{Form::email('email', null, ['class'=> 'input-field form-control user', 'placeholder' => 'Email'])}}
@@ -70,13 +70,13 @@
                             </div>
 
                             <button type="submit" class="btn btn-login ladda-button" >Login</button>
-                        {{Form::close()}}            
+                        {{Form::close()}}
                     </div>
                 </div>
             </div>
         </div>
-        
-        
+
+
     </div>
     <!-- END LOCKSCREEN BOX -->
     <!-- BEGIN MANDATORY SCRIPTS -->

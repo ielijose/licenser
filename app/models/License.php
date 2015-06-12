@@ -19,6 +19,11 @@ class License extends Model {
         return $query->where('status', 'available');
     }
 
+    public function scopeAvailable($query, $license)
+    {
+        return $query->where('status', 'available')->where('license', $license);
+    }
+
     /* Relationships */
 
     /* Function */
@@ -30,14 +35,20 @@ class License extends Model {
                 return '<span class="label label-info"> Disponible </span>';
                 break;
 
-            case 'used':
-                return '<span class="label label-success"> Usada </span>';
+            case 'actived':
+                return '<span class="label label-success"> Activada </span>';
                 break;
 
             default:
                 # code...
                 break;
         }
+    }
+
+    public function activate($domain){
+        $this->domain = $domain;
+        $this->status = 'actived';
+        return $this->save();
     }
 
 }

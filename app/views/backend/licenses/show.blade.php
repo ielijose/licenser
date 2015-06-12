@@ -60,6 +60,14 @@
                                             {{ $license->getStatus() }}
                                         </div>
                                     </div>
+                                    @if($license->status == 'actived')
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Dominio:</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" name="domain" class="form-control" value="{{ $license->domain }}" disabled>
+                                        </div>
+                                    </div>
+                                    @endif
 
                                 </form>
                             </div>
