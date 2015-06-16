@@ -8,11 +8,11 @@
                 <a href="/licenses"><i class="fa fa-barcode"></i><span class="sidebar-text">Licencias</span></a>
             </li>
 
-            <!--<li class="<?= Request::is('*estudiantes*') ? 'current' : '' ?>">
-                <a href="/estudiantes"><i class="fa fa-user"></i><span class="sidebar-text">Estudiantes</span></a>
+            <li class="<?= Request::is('*payments*') ? 'current' : '' ?>">
+                <a href="/payments"><i class="fa fa-dollar"></i><span class="sidebar-text">Ventas</span></a>
             </li>
 
-
+<!--
             <li class="<?= Request::is('*prestamos*') ? 'current' : '' ?>">
                 <a href="/prestamos"><i class="fa fa-edit"></i><span class="sidebar-text">Prestamos</span></a>
             </li>

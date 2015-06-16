@@ -8,7 +8,6 @@ $(window).resize(function () {
     img_width = $('.jcrop-holder img').parent().parent().parent().width() - 40;
     $('.jcrop-holder img').width(img_width);
     $('.jcrop-holder img').height('auto');
-    alert(img_width);
 });
 
 $('#chat-toggle').on('click', function () {
@@ -50,7 +49,7 @@ function cropImage() {
     $('#image_crop1').Jcrop({
         onChange: updatePreview,
         onSelect: updatePreview,
-        aspectRatio: 1 / 1
+        aspectRatio: xsize / ysize
     }, function () {
         // Use the API to get the real image size
         var bounds = this.getBounds();
@@ -82,8 +81,7 @@ function cropImage() {
         // start off with jcrop-light class
         bgOpacity: 0.5,
         bgColor: 'transparent',
-        addClass: 'jcrop-light',
-        aspectRatio: 1 / 1
+        addClass: 'jcrop-light'
     }, function () {
         crop_2 = this;
         crop_2.setSelect([130, 65, 130 + 350, 65 + 285]);

@@ -75,6 +75,9 @@
                             <a href="/dashboard/profile">
                                 <i class="glyph-icon flaticon-account"></i> Mi Perfil
                             </a>
+                            <a href="/settings">
+                                <i class="glyph-icon flaticon-settings21"></i> Configuración
+                            </a>
                         </li>
                         <li class="dropdown-footer clearfix">
                             <a href="javascript:;" class="toggle_fullscreen" title="Pantalla completa">

@@ -24,15 +24,12 @@ $(function(){
 	}
 
 	/*  Background slide for lockscreen page  */
-	var datapage = $('body').attr('data-page');
-	if(datapage == 'login' || datapage == 'signup' || datapage == 'forgot'){
+	if($('body').attr('data-page') == 'login' || $('body').attr('data-page') == 'signup'){
 		$('#submit-form').click(function(e){
         e.preventDefault();
         var l = Ladda.create(this);
         l.start();
-
-        $("#"+$('body').attr('data-page')).submit();
-        
+        $('#submit-form').parent("form").submit();
 
     });
 	}
