@@ -155,6 +155,21 @@ class PaypalController extends BaseController
                     Session::forget('email');
                     Session::put('payment', $p->toJson());
                     Session::put('license', $l->toJson());
+
+                    /* create expiration */
+
+                    $e = new Expiration(['email' => $data['email']]);
+                    if($e->save()){
+                        Mail::send('emails.layout', ['payment' => $p, 'license' => $l, 'expiration' => $e], function($message) use ($p)
+                        {
+                           $message->to($p->email, $p->email)->subject('Licencia Generada!');
+                        });
+                    }
+
+                    /* :expiration */
+
+
+
                     return Redirect::route('payment.success');
                 }
             }

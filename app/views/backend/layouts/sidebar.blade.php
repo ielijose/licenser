@@ -12,12 +12,12 @@
                 <a href="/payments"><i class="fa fa-dollar"></i><span class="sidebar-text">Ventas</span></a>
             </li>
 
-<!--
-            <li class="<?= Request::is('*prestamos*') ? 'current' : '' ?>">
-                <a href="/prestamos"><i class="fa fa-edit"></i><span class="sidebar-text">Prestamos</span></a>
+
+            <li class="<?= Request::is('*settings*') ? 'current' : '' ?>">
+                <a href="/settings"><i class="glyph-icon flaticon-settings21"></i><span class="sidebar-text">Configuración</span></a>
             </li>
 
-
+<!--
 
             <li class="<?= Request::is('user*') ? 'current' : '' ?>">
                 <a href="/user"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Usuarios</span></a>

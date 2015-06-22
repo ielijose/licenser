@@ -13,11 +13,12 @@
     @include('backend.partials.alert')
     <div class="row">
         <div class="col-md-12">
-            <form action="/settings" method="post" class="form-horizontal" role="form" id="settings">
+            <form action="/settings" method="post" class="form-horizontal" role="form" id="settings" enctype="multipart/form-data">
                 <!-- BEGIN TABS -->
                 <div class="tabbable tabbable-custom form">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#payments" data-toggle="tab">Pagos</a></li>
+                        <li class=""><a href="#plugin" data-toggle="tab">Plugin</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="space20"></div>
@@ -68,6 +69,61 @@
                                                         <div class="control-label col-md-3">Costo plugin:</div>
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" name="plugin_cost" value="{{ Setting::key('plugin_cost')->first()->value }}">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-12">
+                                        <div class="align-center">
+                                            <button class="btn btn-primary m-r-20 save-profile">Guardar</button>
+                                            <a href="/" class="btn btn-default">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                         <div class="tab-pane" id="plugin">
+                            <div class="row profile">
+                                <div class="col-md-12">
+
+                                    <div class="row profile-classic">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-title line">
+                                                    <div class="caption"><i class="fa fa-code c-gray m-r-10"></i> Plugin</div>
+                                                </div>
+                                                <div class="panel-body">
+
+                                                    @if(Setting::key('plugin_zip')->first())
+
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-md-offset-3">
+                                                            <strong>Actualmente subido: </strong>{{ Setting::key('plugin_zip')->first()->value }}
+                                                        </div>
+                                                    </div>
+
+
+                                                    @endif
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Plugin ZIP:</div>
+                                                        <div class="col-md-6">
+                                                            <input name="plugin" type="file" class="form-control" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="control-label col-md-3">Duración de descarga: <small>(Minutos)</small></div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" name="link_duration" value="{{ Setting::key('link_duration')->first()->value }}">
                                                         </div>
                                                     </div>
 
@@ -138,7 +194,7 @@
 
 <script type="text/javascript">
 $(document).on("ready", function() {
-    $("#avatar, #avatar figcaption, #avatar p").dropzone({
+    $("#dropzone").dropzone({
         url: "/dashboard/logo",
         createImageThumbnails: false,
         init: function() {

@@ -1,4 +1,5 @@
 <?php
+use Carbon\Carbon;
 
 class ApiController extends BaseController {
 
@@ -23,6 +24,22 @@ class ApiController extends BaseController {
 			}
 		}
 		return Response::json(["status" => 'invalid']);
+	}
+
+	public function download($token){
+		$e = Expiration::where('token', $token)->first();
+		if($e){
+
+			$expirationDate = Carbon::parse($e->expiration);
+			$now = Carbon::now();
+			if($expirationDate->lte($now)){
+				return Response::download(public_path() . '/uploads/plugins/' .Setting::key('plugin_zip')->first()->value);
+			}else{
+				echo "Su enlace ha expirado, consulte con el administraor del sistema";
+			}
+		}else{
+			App::abort(403, 'Unauthorized action.');
+		}
 	}
 
 }

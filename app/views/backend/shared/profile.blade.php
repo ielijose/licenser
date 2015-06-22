@@ -28,18 +28,14 @@
                                         <div class="col-md-12">
                                             <ul class="list-unstyled profile-nav col-md-3">
                                                 <li>
-                                                    <figure id="avatar">
+                                                    <figure id="avataar">
 
-                                                        <img id="dropzone" src="{{ $user->getProfilePicture() }}" alt="{{ $user->full_name }}"/>    
-                                                        <figcaption>
-                                                            <i class="fa fa-rotate-left rotate"></i>
-                                                            <p>Cambiar imagen</p>
-                                                            <i class="fa fa-rotate-right rotate"></i>
-                                                        </figcaption>
+                                                        <img id="" src="{{ $user->getProfilePicture() }}" alt="{{ $user->full_name }}"/>
+
 
                                                     </figure>
                                                     <div class="font-animation">
-                                                        <i class="fa fa-spinner faa-spin animated" style="display: inline-block; font-size:2em"></i> 
+                                                        <i class="fa fa-spinner faa-spin animated" style="display: inline-block; font-size:2em"></i>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -47,7 +43,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12 profile-info">
 
-                                                        <h1>{{ $user->full_name }}</h1>  
+                                                        <h1>{{ $user->full_name }}</h1>
 
                                                     </div>
                                                 </div>
@@ -64,35 +60,28 @@
                                                 </div>
                                                 <div class="panel-body">
                                                     <div class="row">
-                                                        <div class="control-label col-md-3 p-t-0">Miembro desde:</div> 
+                                                        <div class="control-label col-md-3 p-t-0">Miembro desde:</div>
                                                         <div class="col-md-6">{{ $user->getHumanDate() }}</div>
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Nombre:</div> 
+                                                        <div class="control-label col-md-3">Nombre:</div>
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" name="full_name" value="{{ $user->full_name }}">
                                                         </div>
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Correo Electronico:</div> 
+                                                        <div class="control-label col-md-3">Correo Electronico:</div>
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" name="email" value="{{ $user->email }}">
                                                         </div>
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Teléfono:</div> 
+                                                        <div class="control-label col-md-3">Teléfono:</div>
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" name="phone" value="{{ $user->phone }}">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="control-label col-md-3">Descripción breve:</div> 
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" name="description" value="{{ $user->description }}">
                                                         </div>
                                                     </div>
 
@@ -109,13 +98,13 @@
                                                 </div>
                                                 <div class="panel-body">
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Contraseña:</div> 
+                                                        <div class="control-label col-md-3">Contraseña:</div>
                                                         <div class="col-md-6">
                                                             <input type="password" class="form-control" name="password" value="">
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="control-label col-md-3">Confirmar contraseña:</div> 
+                                                        <div class="control-label col-md-3">Confirmar contraseña:</div>
                                                         <div class="col-md-6">
                                                             <input type="password" class="form-control" name="password_confirmation" value="">
                                                         </div>
@@ -132,7 +121,7 @@
                                             <button class="btn btn-primary m-r-20 save-profile">Guardar</button>
                                             <a href="/" class="btn btn-default">Cancelar</a>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +143,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <h4 class="modal-title" id="myModalLabel"><strong>Recortar imagen</strong> </h4>
                     </div>
-                    <div class="modal-body ">                   
+                    <div class="modal-body ">
 
                         <div class="row">
                             <div class="col-md-12 text-center" id="image-body">
@@ -173,7 +162,7 @@
                 </form>
             </div>
         </div>
-    </div>  
+    </div>
 
 
 </div>

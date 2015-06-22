@@ -28,8 +28,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public static $rules = [
     'full_name' => 'required',
-    'phone' => 'required',
-    'description' => 'required',
     'username' => 'required|unique:users',
     'email' => 'required|email|unique:users',
     'password' => 'required',
@@ -63,7 +61,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         });
     }
 
-    /* Scopes */       
+    /* Scopes */
 
     public function scopeUsername($query, $username)
     {
@@ -83,7 +81,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function getProfilePicture()
     {
-    	return "/assets/img/avatars/avatar1.png";    	
+    	return "/assets/img/avatars/avatar1.png";
     }
 
     public function getHumanDate()

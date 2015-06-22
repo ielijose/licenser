@@ -81,6 +81,8 @@ Route::get('payment/failed', array(
 /* API */
 	Route::post('/api/activate', ['uses' => 'ApiController@activate']);
 
+Route::get('/download/plugin/{token}', ['uses' => 'ApiController@download']);
+
 
 // Error Handle
 

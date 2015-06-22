@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="panel no-bd bd-9 panel-stat">
                     <div class="panel-body bg-dark">
                         <div class="icon"><i class="fa fa-barcode"></i>
@@ -42,7 +42,22 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="panel no-bd bd-9 panel-stat">
+                    <div class="panel-body bg-green">
+                        <div class="icon"><i class="fa fa-dollar"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="stat-num">{{ count(Payment::all()) }}</div>
+                                <a href="/payments"><h3>Ventas</h3></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="panel no-bd bd-9 panel-stat">
                     <div class="panel-body bg-blue">
                         <div class="icon"><i class="fa fa-user"></i>
